@@ -6,7 +6,9 @@ blueChannel = double(rgbImage(:,:,3)); % Blue channel
 
 meanBlur(1:3,1:3) = 1;
 
-gaussian = [1,2,1;2,4,2;1,2,1];
+gaussian = [1,2,1;
+            2,4,2;
+            1,2,1];
 
 mean_redResult = applyKernal_withExtend(redChannel, meanBlur);
 mean_greenResult = applyKernal_withExtend(greenChannel, meanBlur);
